@@ -1,38 +1,79 @@
+/* src/App.css */
+
+/* General styles */
 .App {
   text-align: center;
+  font-family: Arial, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Header styles */
+.App h1 {
+  color: #2c3e50;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Players list container */
+.players-container {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 20px;
+  padding: 20px;
+}
+
+/* Card styles (optional, if you want to override react-bootstrap) */
+.card {
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: none;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 15px;
+}
+
+.card-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.card-text {
+  text-align: left;
+  margin-bottom: 5px;
+}
+
+.card-text p {
+  margin: 5px 0;
+  font-size: 0.9rem;
+}
+/* Footer styles */
+.app-footer {
+  background-color: #70879d;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  text-align: center;
+  padding: 30px 0 20px;
+  margin-top: 10px;
+  font-size: 1rem;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  border-top: 1px solid #34495e;
+  box-sizing: border-box; 
 }
